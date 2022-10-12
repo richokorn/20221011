@@ -5,7 +5,9 @@
   "targets": {
     "build": {
       "executor": "@nrwl/angular:ng-packagr-lite",
-      "outputs": ["dist/libs/luggage/ui-card"],
+      "outputs": [
+        "dist/libs/luggage/ui-card"
+      ],
       "options": {
         "project": "libs/luggage/ui-card/ng-package.json"
       },
@@ -21,7 +23,9 @@
     },
     "test": {
       "executor": "@nrwl/jest:jest",
-      "outputs": ["coverage/libs/luggage/ui-card"],
+      "outputs": [
+        "coverage/libs/luggage/ui-card"
+      ],
       "options": {
         "jestConfig": "libs/luggage/ui-card/jest.config.ts",
         "passWithNoTests": true
@@ -37,5 +41,8 @@
       }
     }
   },
-  "tags": ["domain:luggage", "type:ui"]
+  "tags": [
+    "domain:luggage",
+    "type:ui"
+  ]
 }
