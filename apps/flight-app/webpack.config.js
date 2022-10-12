@@ -9,7 +9,7 @@ module.exports = withModuleFederationPlugin({
     //   "external": "http://localhost:4200/remoteEntry.js",
     //   "flightAdmin": "http://localhost:4200/remoteEntry.js",
     //   "luggage": "http://localhost:4200/remoteEntry.js",
-    passenger: 'http://localhost:4201/remoteEntry.js',
+    // passenger: 'http://localhost:4201/remoteEntry.js',
   },
 
   shared: {
