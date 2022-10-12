@@ -2,14 +2,15 @@ import { CommonModule } from '@angular/common';
 import { NgModule } from '@angular/core';
 import { RouterModule } from '@angular/router';
 import { LuggageDomainModule } from '@flight-workspace/luggage/domain';
+import { LuggageUiCardModule } from '@flight-workspace/luggage/ui-card';
 import { CheckinComponent } from './checkin.component';
 
 @NgModule({
   imports: [
     CommonModule,
     LuggageDomainModule,
+    LuggageUiCardModule,
 
-    // Add this:
     RouterModule.forChild([{ path: '', component: CheckinComponent }]),
   ],
   declarations: [CheckinComponent],
