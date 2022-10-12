@@ -2,10 +2,10 @@ const { shareAll, withModuleFederationPlugin } = require('@angular-architects/mo
 
 module.exports = withModuleFederationPlugin({
 
-  name: 'mfe1',
+  name: 'passenger',
 
   exposes: {
-    './Component': './apps/passenger/src/app/app.component.ts',
+    './module': './apps/passenger/src/app/passenger/passenger.module.ts',
   },
 
   shared: {
