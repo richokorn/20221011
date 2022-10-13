@@ -1,4 +1,9 @@
 import { loadRemoteModule } from '@angular-architects/module-federation';
+import {
+  startsWith,
+  WebComponentWrapper,
+  WebComponentWrapperOptions,
+} from '@angular-architects/module-federation-tools';
 import { Routes } from '@angular/router';
 import { PassengerMf } from '../mf-types';
 import { BasketComponent } from './basket/basket.component';
@@ -30,6 +35,43 @@ export const APP_ROUTES: Routes = [
     component: BasketComponent,
     outlet: 'aux',
   },
+
+  {
+    path: 'angular2',
+    component: WebComponentWrapper,
+    data: {
+      remoteEntry:
+        'https://gray-pond-030798810.azurestaticapps.net//remoteEntry.js',
+      remoteName: 'angular2',
+      exposedModule: './web-components',
+      elementName: 'angular2-element',
+    } as WebComponentWrapperOptions,
+  },
+
+  {
+    path: 'react',
+    component: WebComponentWrapper,
+    data: {
+      remoteEntry:
+        'https://witty-wave-0a695f710.azurestaticapps.net/remoteEntry.js',
+      remoteName: 'react',
+      exposedModule: './web-components',
+      elementName: 'react-element',
+    } as WebComponentWrapperOptions,
+  },
+
+  {
+    matcher: startsWith('angular3'),
+    component: WebComponentWrapper,
+    data: {
+      remoteEntry:
+        'https://gray-river-0b8c23a10.azurestaticapps.net/remoteEntry.js',
+      remoteName: 'angular3',
+      exposedModule: './web-components',
+      elementName: 'angular3-element',
+    } as WebComponentWrapperOptions,
+  },
+
   {
     path: '**',
     redirectTo: 'home',
